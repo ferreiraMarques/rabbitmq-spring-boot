@@ -1,0 +1,40 @@
+package com.rabbitmq.demorabbit.dto;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import java.io.Serializable;
+import java.util.List;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+public class MenuOrder implements Serializable {
+
+    private static final long serialVersionUID = -1138446817700416884L;
+
+    @JsonProperty
+    private String orderIdentifier;
+
+    @JsonProperty
+    private int orderId;
+
+    @JsonProperty
+    private List<String> orderList;
+
+    @JsonProperty
+    private String customerName;
+
+    @Override
+    public String toString() {
+        return "MenuOrder{"
+                + "orderIdentifier='" + orderIdentifier + '\''
+                + ", orderId=" + orderId
+                + ", orderList=" + orderList
+                + ", customerName='" + customerName + '\''
+                + '}';
+    }
+}
